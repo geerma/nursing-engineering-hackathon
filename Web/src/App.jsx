@@ -12,8 +12,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Homepage />}></Route>
       <Route path="/education" element={<Educationpage />}></Route>
-      <Route path="/search" element={<Notificationspage />}></Route>
-      <Route path="/notifications" element={<Searchpage />}></Route>
+      <Route path="/search" element={<Searchpage/>}></Route>
+      <Route path="/notifications" element={<Notificationspage/>}></Route>
     </Routes>
   );
 }
