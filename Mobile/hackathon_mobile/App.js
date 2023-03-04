@@ -11,10 +11,13 @@ import {
   InboxScreen,
   InformationScreen,
   AdultInformationScreen,
-  ChildInformationScreen,
   SurgeriesScreen,
   ChronicConditionsScreen,
   ArrivingToHospitalScreen,
+  ChildInformationScreen,
+  NeonateScreen,
+  ChildScreen,
+  AdolescentScreen,
   GoingHomeScreen
 } from "./src/screens";
 
@@ -35,8 +38,10 @@ export default function App() {
           <Stack.Screen name="Surgeries" component={SurgeriesScreen} />
           <Stack.Screen name="Arriving" component={ArrivingToHospitalScreen} />
           <Stack.Screen name="GoingHome" component={GoingHomeScreen} />
-          <Stack.Screen name="Child" component={ChildInformationScreen} />
-          
+          <Stack.Screen name="ChildInfo" component={ChildInformationScreen} />
+          <Stack.Screen name="Neonate" component={NeonateScreen} />
+          <Stack.Screen name="Child" component={ChildScreen} />
+          <Stack.Screen name="Adolescent" component={AdolescentScreen} />
         </>
       </Stack.Navigator>
     </NavigationContainer>

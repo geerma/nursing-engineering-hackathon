@@ -13,8 +13,8 @@ export default function InformationScreen({ navigation }) {
     navigation.navigate("Adult");
   };
 
-  const navigateChild = () => {
-    navigation.navigate("Child");
+  const navigateChildInfo = () => {
+    navigation.navigate("ChildInfo");
   };
 
 
@@ -27,7 +27,7 @@ export default function InformationScreen({ navigation }) {
       >
         <Text style={styles.buttonTitle}>Adult</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => navigateChild()}>
+      <TouchableOpacity style={styles.button} onPress={() => navigateChildInfo()}>
         <Text style={styles.buttonTitle}>Child</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={() => navigateLogin()}>
