@@ -1,6 +1,6 @@
-import { Image, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet,Image, Text, TouchableOpacity, View } from "react-native";
 import styles from './styles';
-
+import FetchData from "../../getSurgeries";
 export default function SurgeriesScreen({ navigation }) {
   const navigateAdult = () => {
     navigation.navigate("Adult");
@@ -12,11 +12,9 @@ export default function SurgeriesScreen({ navigation }) {
   };
 
   return (
-    <View>
-      <Text>Surgeries</Text>
-      <TouchableOpacity style={styles.button} onPress={() => navigateAdult()}>
-        <Text style={styles.buttonTitle}>Return</Text>
-      </TouchableOpacity>
+    <View style = {styles.container}>
+     <FetchData />   
+
     </View>
   );
 }
