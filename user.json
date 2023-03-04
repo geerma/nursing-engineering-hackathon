@@ -1,0 +1,12 @@
+{
+    "type":"patient",
+    "fname":"bob",
+    "mname":"swagmaster",
+    "lname":"jones",
+    "dob":"01-01-1900",
+    "ULI":1234,
+    "ID":0,
+    "email":"bob@email.com",
+    "username":"bobj",
+    "password":"plaintext"
+}

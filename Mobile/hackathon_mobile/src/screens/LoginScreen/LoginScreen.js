@@ -21,6 +21,10 @@ export default function LoginScreen({ navigation }) {
     navigation.navigate("Inbox");
   };
 
+  const navigateMyAccount = () => {
+    navigation.navigate("MyAccount");
+  };
+
   useEffect(() => {
     console.log("UseEffect");
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -99,6 +103,14 @@ export default function LoginScreen({ navigation }) {
       >
         <Text style={styles.navigationTitle}>GoToInbox</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.navigation}
+        onPress={() => navigateMyAccount()}
+      >
+        <Text style={styles.navigationTitle}>GoToMyAccount</Text>
+      </TouchableOpacity>
+
     </View>
   );
 }

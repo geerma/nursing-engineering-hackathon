@@ -1,0 +1,40 @@
+{
+    "title":"Post surgery survey",
+    "description":"Please rate your pain and experiences",
+    "questions":[
+        {
+            "number":1,
+            "text":"Have you experienced new pain?",
+            "options":[
+                {
+                    "number":1,
+                    "text":"Yes",
+                    "info_if_chosen":"Please call your doctor."
+                },
+                {
+                    "number":2,
+                    "text":"No",
+                    "info_if_chosen":""
+                }
+            ],
+            "chosen_option":0
+        },
+        {
+            "number":2,
+            "text":"Is your pain manageable?",
+            "options":[
+                {
+                    "number":1,
+                    "text":"Yes",
+                    "info_if_chosen":""
+                },
+                {
+                    "number":2,
+                    "text":"No",
+                    "info_if_chosen":"Please call your doctor."
+                }
+            ],
+            "chosen_option":0
+        }
+    ]
+}

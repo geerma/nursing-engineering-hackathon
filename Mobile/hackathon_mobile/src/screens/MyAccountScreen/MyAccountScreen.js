@@ -87,7 +87,7 @@ export default function MyAccountScreen({ navigation }) {
 
             <TextInput
                 style={styles.input}
-                placeholder= {userFullName}
+                placeholder= {"Full Name: " + userFullName}
                 onChangeText={(text) => setUserFullName(text)}
                 value={userFullName}
                 autoCapitalize="none"
@@ -95,7 +95,7 @@ export default function MyAccountScreen({ navigation }) {
 
             <TextInput
                 style={styles.input}
-                placeholder= {userDateOfBirth}
+                placeholder= {"Date of Birth: " + userDateOfBirth}
                 onChangeText={(text) => setUserDateOfBirth(text)}
                 value={userDateOfBirth}
                 autoCapitalize="none"
@@ -103,7 +103,7 @@ export default function MyAccountScreen({ navigation }) {
 
             <TextInput
                 style={styles.input}
-                placeholder= {userEmail}
+                placeholder= {"Email: " + userEmail}
                 onChangeText={(text) => setUserEmail(text)}
                 value={userEmail}
                 autoCapitalize="none"
@@ -111,7 +111,7 @@ export default function MyAccountScreen({ navigation }) {
 
             <TextInput
                 style={styles.input}
-                placeholder= {userPassword}
+                placeholder= {"Password: " + userPassword}
                 onChangeText={(text) => setUserPassword(text)}
                 value={userPassword}
                 autoCapitalize="none"
@@ -119,7 +119,15 @@ export default function MyAccountScreen({ navigation }) {
 
             <TextInput
                 style={styles.input}
-                placeholder= {userEmergencyContactName}
+                placeholder= {"User Name: "+ userName}
+                onChangeText={(text) => setUserName(text)}
+                value={userName}
+                autoCapitalize="none"
+            />
+
+            <TextInput
+                style={styles.input}
+                placeholder= {"Contact Name: " + userEmergencyContactName}
                 onChangeText={(text) => setUserEmergencyContactName(text)}
                 value={userEmergencyContactName}
                 autoCapitalize="none"
@@ -127,19 +135,12 @@ export default function MyAccountScreen({ navigation }) {
 
             <TextInput
                 style={styles.input}
-                placeholder= {userEmergencyContactNumber}
+                placeholder= {"Contact Number: " + userEmergencyContactNumber}
                 onChangeText={(text) => setUserEmergencyContactNumber(text)}
                 value={userEmergencyContactNumber}
                 autoCapitalize="none"
             />
 
-            <TextInput
-                style={styles.input}
-                placeholder= {userName}
-                onChangeText={(text) => setUserName(text)}
-                value={userName}
-                autoCapitalize="none"
-            />
 
             <TouchableOpacity style={styles.button} onPress={() => handleSaveButton()}>
                 <Text style={styles.buttonTitle}>Save</Text>
