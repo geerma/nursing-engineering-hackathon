@@ -126,3 +126,19 @@
         flex-wrap: wrap;
     }
 }
+
+.notpage-container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .navbar {
+    width: 200px;
+  }
+  
+  .notpage-content {
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+  }
