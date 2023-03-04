@@ -89,7 +89,7 @@ export default function MyAccountScreen({ navigation }) {
                 style={styles.input}
                 placeholder= {"Full Name: " + userFullName}
                 onChangeText={(text) => setUserFullName(text)}
-                value={"Full Name: "+ userFullName}
+                value={userFullName}
                 autoCapitalize="none"
             />
 
@@ -97,7 +97,7 @@ export default function MyAccountScreen({ navigation }) {
                 style={styles.input}
                 placeholder= {"Date of Birth: " + userDateOfBirth}
                 onChangeText={(text) => setUserDateOfBirth(text)}
-                value={"Date of Birth: " + userDateOfBirth}
+                value={userDateOfBirth}
                 autoCapitalize="none"
             />
 
@@ -105,7 +105,7 @@ export default function MyAccountScreen({ navigation }) {
                 style={styles.input}
                 placeholder= {"Email: " + userEmail}
                 onChangeText={(text) => setUserEmail(text)}
-                value={"Email: " + userEmail}
+                value={userEmail}
                 autoCapitalize="none"
             />
 
@@ -113,7 +113,7 @@ export default function MyAccountScreen({ navigation }) {
                 style={styles.input}
                 placeholder= {"Password: " + userPassword}
                 onChangeText={(text) => setUserPassword(text)}
-                value={"Password: " +userPassword}
+                value={userPassword}
                 autoCapitalize="none"
             />
 
@@ -121,7 +121,7 @@ export default function MyAccountScreen({ navigation }) {
                 style={styles.input}
                 placeholder= {"User Name: "+ userName}
                 onChangeText={(text) => setUserName(text)}
-                value={"User Name: "+ userName}
+                value={userName}
                 autoCapitalize="none"
             />
 
@@ -129,7 +129,7 @@ export default function MyAccountScreen({ navigation }) {
                 style={styles.input}
                 placeholder= {"Contact Name: " + userEmergencyContactName}
                 onChangeText={(text) => setUserEmergencyContactName(text)}
-                value={"Contact Name: " + userEmergencyContactName}
+                value={userEmergencyContactName}
                 autoCapitalize="none"
             />
 
@@ -137,7 +137,7 @@ export default function MyAccountScreen({ navigation }) {
                 style={styles.input}
                 placeholder= {"Contact Number: " + userEmergencyContactNumber}
                 onChangeText={(text) => setUserEmergencyContactNumber(text)}
-                value={"Contact Number: " + userEmergencyContactNumber}
+                value={userEmergencyContactNumber}
                 autoCapitalize="none"
             />
 
