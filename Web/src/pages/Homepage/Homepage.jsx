@@ -1,8 +1,15 @@
 import React from 'react'
+import "./HomePage.css"
+import NavBar from "../../components/Navbar/Navbar"
 
-const Homepage = () => {
+
+function Homepage() {
   return (
-    <div>Homepage</div>
+    <>
+      <div className='Homepage'></div>
+      <NavBar />
+    </>
+
   )
 }
 
