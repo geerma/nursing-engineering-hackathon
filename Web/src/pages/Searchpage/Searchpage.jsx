@@ -114,19 +114,35 @@ import CartData from '../../mock-carts.json'; //test cart data, change later
 import { collection, doc, getDoc, setDoc } from 'firebase/firestore';
 import { db } from '../../firebase/config.js';
 
-const docRef = doc(db, 'patient', 'QDGRfnwJMoAyDJDfBcFY');
-const docSnap = await getDoc(docRef);
-
 const Searchpage = () => {
   const [patientQuery, setPatientQuery] = useState('');
   const [patient, setPatient] = useState('');
   const [cartQuery, setCartQuery] = useState('');
   const [cart, setCart] = useState('');
+  const [docSnap, setDocSnap] = useState(null);
 
   const sendItem = async () => {
-    console.log('Chosen patient:', chosenPatientId);
-    console.log('Chosen cart item:', chosenCartId);
+    console.log('Chosen patient:', patient);
+    console.log('Chosen cart item:', cart);
   };
+
+  const getItem = async () => {
+    if (docSnap.exists()) {
+      console.log("Document data:", docSnap.data());
+    } else {
+      // doc.data() will be undefined in this case
+      console.log("No such document!");
+    }
+};
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const docRef = doc(db, 'patient', 'QDGRfnwJMoAyDJDfBcFY');
+      const docSnap = await getDoc(docRef);
+      setDocSnap(docSnap);
+    };
+    fetchData();
+  }, []);
 
   return (
     <div className="searchpage-container">
@@ -156,7 +172,7 @@ const Searchpage = () => {
             <div className="resultbox" key={index}>
               <p>{postPatient.first_name}</p>
               <p>{postPatient.email}</p>
-              <button onClick={(e) => this.setPatient(postPatient.id)}>
+              <button onClick={(e) => setPatient(postPatient.id)}>
                 Choose this patient
               </button>
             </div>
@@ -182,7 +198,7 @@ const Searchpage = () => {
             <div className="resultbox" key={index}>
               <p>{postCart.title}</p>
               <p>{postCart.url}</p>
-              <button onClick={(e) => this.setCart(postCart.id)}>
+              <button onClick={(e) => setCart(postCart.id)}>
                 Choose this cart item
               </button>
             </div>
@@ -194,6 +210,13 @@ const Searchpage = () => {
           }}
         >
           Send chosen cart item to chosen patient
+        </button>
+        <button
+          onClick={(e) => {
+            getItem();
+          }}
+        >
+          Get patient details
         </button>
       </div>
     </div>
