@@ -18,7 +18,7 @@ import {
   NeonateScreen,
   ChildScreen,
   AdolescentScreen,
-  GoingHomeScreen
+  GoingHomeScreen,
   MyAccountScreen
 } from "./src/screens";
 

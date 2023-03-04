@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import "./Notificationspage.css"
 import { VscAccount } from "react-icons/vsc";
-import newUsers from "./newusers.json"
+import newUsers from "./new-users.json"
+import systemUpdate from "./system-update.json"
+import educationUpdate from "./education-update.json"
 
 const Notificationspage = () => {
 
@@ -24,9 +26,36 @@ const Notificationspage = () => {
     </div>
       <div className="gjs-cell" id="ic6b">
         <h2>Update on system</h2>
+                {
+          systemUpdate.map((item) => (
+                <div className="gjs-row" id="ih5k" key={item.id}>
+                  <div className="gjs-cell" id="i9v3">
+                    <h4>{item.title}</h4>
+                  </div>
+                  <div className="gjs-cell" id="i3fd">
+                <p>{item.description}</p>
+                  </div>
+              </div>
+          ))
+        }
     </div>
       <div className="gjs-cell" id="i1fco">
         <h2>Update on Education</h2>
+                        {
+          educationUpdate.map((item) => (
+              <div className="gjs-row" id="iua2">
+              <div className="gjs-cell" id="i5ds">
+                <h4>{item.title}</h4>
+                </div>
+              <div className="gjs-cell" id="iwfe">
+                <p>{item.description}</p>
+                </div>
+              <div className="gjs-cell" id="igps">
+                <p>{item.url}</p>
+                </div>
+              </div>
+          ))
+        }
     </div>
   </div>
 
