@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+import { db } from "../../firebase/config";
+import { doc, getDoc } from "firebase/firestore"
+import React, {useState, useEffect} from 'react';
 import {
   TextInput,
   View,
@@ -10,13 +12,16 @@ import {
 import styles from "./styles";
 
 export default function MyAccountScreen({ navigation }) {
-  const [userFullName, setUserFullName] = useState('John Doe');
-  const [userDateOfBirth, setUserDateOfBirth] = useState('01/01/2001');
-  const [userEmail, setUserEmail] = useState('johndoe@gmail.com');
-  const [userPassword, setUserPassword] = useState('password');
-  const [userName, setUserName] = useState('johndoe');
-  const [userEmergencyContactName, setUserEmergencyContactName] = useState('Penelope Garcia');
-  const [userEmergencyContactNumber, setUserEmergencyContactNumber] = useState('4031234567');
+  const [userFullName, setUserFullName] = useState('');
+  const [userDateOfBirth, setUserDateOfBirth] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+  const [userPassword, setUserPassword] = useState('');
+  const [userName, setUserName] = useState('');
+  const [userEmergencyContactName, setUserEmergencyContactName] = useState('');
+  const [userEmergencyContactNumber, setUserEmergencyContactNumber] = useState('');
+  useEffect(() => {
+    getPatient();
+  }, []);
   const navigateMyAccount = () => {
     navigation.navigate("MyAccount");
   };
@@ -71,6 +76,35 @@ export default function MyAccountScreen({ navigation }) {
         emergencyContactNumber: userEmergencyContactNumber
       };
     }
+
+    const getPatient = async () => {
+      const docRef = doc(db, "patient", "QDGRfnwJMoAyDJDfBcFY");
+      const docSnap = await getDoc(docRef);
+  
+      if (docSnap.exists()) {
+        const fullName = docSnap.data().FullName;
+        const dob  = docSnap.data().DateofBirth;
+        const email = docSnap.data().Email;
+        const password = docSnap.data().Password;
+        const contactName = docSnap.data().EContactName;
+        const contactNumber = docSnap.data().EContactNumber;
+        const username = docSnap.data().Username;
+
+  
+        
+        setUserFullName(fullName);
+        setUserDateOfBirth(dob);
+        setUserEmail(email);
+        setUserPassword(password);
+        setUserEmergencyContactName(contactName);
+        setUserEmergencyContactNumber(contactNumber);
+        setUserName(username)
+
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No patient with this ID!");
+      }
+    };
       
 
   return (
@@ -148,24 +182,25 @@ export default function MyAccountScreen({ navigation }) {
 
             <TouchableOpacity
                 style={styles.navigation}
-                onPress={() => navigateMyAccount()}
-            >
-                <Text style={styles.navigationTitle}>GoToMyAccount</Text>
-
-            </TouchableOpacity>
-
-            <TouchableOpacity
-                style={styles.navigation}
                 onPress={() => navigateHome()}
             >
                 <Text style={styles.navigationTitle}>GoToHome</Text>
             </TouchableOpacity>
 
+            
             <TouchableOpacity
                 style={styles.navigation}
                 onPress={() => navigateInbox()}
             >
                 <Text style={styles.navigationTitle}>GoToInbox</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+                style={styles.navigation}
+                onPress={() => navigateMyAccount()}
+            >
+                <Text style={styles.navigationTitle}>GoToMyAccount</Text>
+
             </TouchableOpacity>
             
         </ScrollView>
