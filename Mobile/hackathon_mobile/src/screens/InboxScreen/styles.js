@@ -5,9 +5,15 @@ export default StyleSheet.create({
     alignItems: "center",
   },
 
+  question: {
+    alignItems: "center",
+    margin: 8,
+  },
+
   header: {
     fontSize: 30,
   },
+
 
   input: {
     width: 200,
@@ -25,9 +31,32 @@ export default StyleSheet.create({
     justifyContent: "center",
   },
 
+  choiceButton: {
+    backgroundColor: "#424BB2",
+    marginLeft: 26,
+    marginRight: 26,
+    marginTop: 10,
+    height: 22,
+    width: 300,
+    borderRadius: 2,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  choiceTitle: {
+    color: "white",
+    fontSize: 12,
+    fontWeight: "bold",
+  },
+
   buttonTitle: {
     color: "white",
     fontSize: 16,
     fontWeight: "bold",
   },
+
+  chatheader: {
+    fontSize: 20,
+  }
+
 });
