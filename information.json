@@ -1,0 +1,16 @@
+{
+    "category":"Operation",
+    "medical_area":"Orthopedic",
+    "description":"Foot removal surgery",
+    "age_min":0,
+    "age_max":99,
+    "images":[
+        "image_1.png"
+    ],
+    "videos":[
+        "video_1.mp4"
+    ],
+    "documents":[
+        "instructions.pdf"
+    ]
+}
