@@ -1,0 +1,95 @@
+Appointment information
+
+{
+    "date":"",
+    "description":"",
+    "medications":[
+        "",
+        "",
+        ""
+    ],
+    "instructions":[
+        "",
+        "",
+        ""
+    ],
+    "to_bring":[
+        "",
+        "",
+        ""
+    ],
+    "to_take":[
+        "",
+        "",
+        ""
+    ]
+}
+
+Medical information
+
+{
+    "category":"",
+    "medical_area":"",
+    "description":"",
+    "age_min":0,
+    "age_max":99,
+    "images":[],
+    "videos":[],
+    "documents":[]
+}
+
+Survey
+
+{
+    "title":"",
+    "description":"",
+    "questions":[
+        {
+            "number":0,
+            "options":[
+                {
+                    "number":0,
+                    "text":"",
+                    "info_if_chosen":""
+                },
+                {
+                    "number":1,
+                    "text":"",
+                    "info_if_chosen":""
+                },
+            ],
+            "chosen_option":0
+        },
+        {
+            "number":1,
+            "options":[
+                {
+                    "number":0,
+                    "text":"",
+                    "info_if_chosen":""
+                },
+                {
+                    "number":1,
+                    "text":"",
+                    "info_if_chosen":""
+                },
+            ],
+            "chosen_option":0
+        }
+    ]
+}
+
+User
+
+{
+    "type":"",
+    "fname":"",
+    "mname":"",
+    "lname":"",
+    "dob":"",
+    "ULI":0,
+    "ID":0,
+    "email":"",
+    "username":"",
+    "password":"",
+}

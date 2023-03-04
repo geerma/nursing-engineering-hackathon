@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+.gjs-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.gjs-cell {
+    min-height: 75px;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
+#im3y {
+    max-width: 200px;
+    height: 400.55555725097656px;
+    box-shadow: 0px 0px 10px 0px black;
+    background-repeat: repeat;
+    background-position: left top;
+    background-attachment: scroll;
+    background-size: auto;
+    background-image: linear-gradient(#d1f7ef 0%, #d1f7ef 100%);
+}
+
+#iy6x {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+#i0pht {
+    box-shadow: 0 0 5px 0 black;
+    height: 35px;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    align-self: center;
+    display: flex;
+    align-items: center;
+}
+
+#i0pht:hover {
+    background-repeat: repeat;
+    background-position: left top;
+    background-attachment: scroll;
+    background-size: auto;
+    background-image: linear-gradient(#efffc5 0%, #efffc5 100%);
+}
+
+#iw26w {
+    box-shadow: 0 0 5px 0 black;
+    height: 35px;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    display: flex;
+    align-items: center;
+}
+
+#iw26w:hover {
+    background-repeat: repeat;
+    background-position: left top;
+    background-attachment: scroll;
+    background-size: auto;
+    background-image: linear-gradient(#efffc5 0%, #efffc5 100%);
+}
+
+#i4qdz {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+#ixjiv {
+    box-shadow: 0 0 5px 0 black;
+    height: 35px;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#ixjiv:hover {
+    background-repeat: repeat;
+    background-position: left top;
+    background-attachment: scroll;
+    background-size: auto;
+    background-image: linear-gradient(#efffc5 0%, #efffc5 100%);
+}
+
+#i1i16 {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+#ih7sl {
+    box-shadow: 0 0 5px 0 black;
+    height: 35px;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    display: flex;
+    align-items: center;
+}
+
+#ih7sl:hover {
+    background-repeat: repeat;
+    background-position: left top;
+    background-attachment: scroll;
+    background-size: auto;
+    background-image: linear-gradient(#efffc5 0%, #efffc5 100%);
+}
+
+#iwq3l {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}

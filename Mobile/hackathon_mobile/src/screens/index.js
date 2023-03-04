@@ -2,6 +2,7 @@ export { default as LoginScreen } from './LoginScreen/LoginScreen'
 export { default as HomeScreen } from './HomeScreen/HomeScreen'
 export { default as RegistrationScreen } from './RegistrationScreen/RegistrationScreen'
 export { default as InboxScreen } from './InboxScreen/InboxScreen'
+
 export { default as InformationScreen } from './InformationScreen/InformationScreen'
 
 export { default as ChildInformationScreen } from './ChildInformationScreen/ChildInformationScreen'
@@ -14,3 +15,5 @@ export { default as ChronicConditionsScreen } from './ChronicConditionsScreen/Ch
 export { default as SurgeriesScreen } from './SurgeriesScreen/SurgeriesScreen'
 export { default as ArrivingToHospitalScreen } from './ArrivingToHospitalScreen/ArrivingToHospitalScreen'
 export { default as GoingHomeScreen } from './GoingHomeScreen/GoingHomeScreen'
+
+export { default as MyAccountScreen } from './MyAccountScreen/MyAccountScreen.js'

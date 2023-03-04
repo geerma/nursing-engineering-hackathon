@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import styles from "./styles";
 
@@ -23,6 +23,22 @@ export default function LoginScreen({ navigation }) {
   const navigateInformation = () => {
     navigation.navigate("Information");
   };
+
+  const navigateMyAccount = () => {
+    navigation.navigate("MyAccount");
+  };
+
+  useEffect(() => {
+    console.log("UseEffect");
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        console.log("You are signed in as", user);
+        navigation.navigate("Home");
+      }
+    });
+
+    return unsubscribe;
+  }, []);
 
   const handleLogin = () => {
     console.log(email, password);
@@ -90,9 +106,18 @@ export default function LoginScreen({ navigation }) {
       >
         <Text style={styles.navigationTitle}>GoToInbox</Text>
       </TouchableOpacity>
+      
       <TouchableOpacity style={styles.button} onPress={() => navigateInformation()}>
         <Text style={styles.buttonTitle}>GoToInformation</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.navigation}
+        onPress={() => navigateMyAccount()}
+      >
+        <Text style={styles.navigationTitle}>GoToMyAccount</Text>
+      </TouchableOpacity>
+
     </View>
   );
 }

@@ -19,6 +19,7 @@ import {
   ChildScreen,
   AdolescentScreen,
   GoingHomeScreen
+  MyAccountScreen
 } from "./src/screens";
 
 const Stack = createStackNavigator();
@@ -42,6 +43,7 @@ export default function App() {
           <Stack.Screen name="Neonate" component={NeonateScreen} />
           <Stack.Screen name="Child" component={ChildScreen} />
           <Stack.Screen name="Adolescent" component={AdolescentScreen} />
+          <Stack.Screen name="MyAccount" component={MyAccountScreen} />
         </>
       </Stack.Navigator>
     </NavigationContainer>
