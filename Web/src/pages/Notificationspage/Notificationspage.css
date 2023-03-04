@@ -85,6 +85,42 @@
     width: 50%;
 }
 
+#ih5k {
+    width: 237px;
+    height: 122.77780151367188px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+#i9v3 {
+    min-height: 10%;
+    height: 10px;
+    flex-basis: 25.92%;
+}
+
+#iua2 {
+    flex-direction: column;
+    width: 259px;
+    padding: 5px 5px 5px 5px;
+}
+
+#i5ds {
+    min-height: 20px;
+    margin: 1px 1px 1px 1px;
+}
+
+#iwfe {
+    min-height: 40px;
+    margin: 1px 1px 1px 1px;
+}
+
+#igps {
+    min-height: 20px;
+    margin: 1px 1px 1px 1px;
+}
+
+
 @media (max-width: 768px) {
     .gjs-row {
         flex-wrap: wrap;
