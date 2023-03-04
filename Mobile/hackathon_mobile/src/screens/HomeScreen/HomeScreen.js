@@ -2,7 +2,7 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 import styles from './styles';
 
 export default function HomeScreen({ navigation }) {
-  
+
   const navigateLogin = () => {
     navigation.navigate("Login");
   };
