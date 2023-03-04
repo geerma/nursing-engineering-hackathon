@@ -80,12 +80,12 @@ export default function LoginScreen({ navigation }) {
         <Text style={styles.buttonTitle}>Log in</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.navigation}>
-        <Text style={styles.navigationTitle}>Forgot Password</Text>
+      <TouchableOpacity style={styles.link}>
+        <Text style={styles.link}>Forgot Password</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.navigation}>
-        <Text style={styles.navigationTitle}>Privacy</Text>
+      <TouchableOpacity style={styles.link}>
+        <Text style={styles.link}>Privacy</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
@@ -107,8 +107,8 @@ export default function LoginScreen({ navigation }) {
         <Text style={styles.navigationTitle}>GoToInbox</Text>
       </TouchableOpacity>
       
-      <TouchableOpacity style={styles.button} onPress={() => navigateInformation()}>
-        <Text style={styles.buttonTitle}>GoToInformation</Text>
+      <TouchableOpacity style={styles.navigation} onPress={() => navigateInformation()}>
+        <Text style={styles.navigationTitle}>GoToInformation</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
