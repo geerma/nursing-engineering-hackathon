@@ -1,0 +1,24 @@
+{
+    "date":"01-01-2023",
+    "description":"Test instructions for appointment",
+    "medications":[
+        "Xanax",
+        "Codeine",
+        "Tylenol"
+    ],
+    "instructions":[
+        "Arrive 15 minutes early",
+        "Do not eat 2 hours before",
+        "Do not drink 2 hours before"
+    ],
+    "to_bring":[
+        "Clothing",
+        "Cell phone",
+        "Health care card"
+    ],
+    "to_take":[
+        "Provided medications",
+        "Provided pamphlet",
+        "Free real estate"
+    ]
+}
