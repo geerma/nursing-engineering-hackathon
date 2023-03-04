@@ -87,59 +87,60 @@ export default function MyAccountScreen({ navigation }) {
 
             <TextInput
                 style={styles.input}
-                placeholder= {userFullName}
+                placeholder= {"Full Name: " + userFullName}
                 onChangeText={(text) => setUserFullName(text)}
-                value={userFullName}
+                value={"Full Name: "+ userFullName}
                 autoCapitalize="none"
             />
 
             <TextInput
                 style={styles.input}
-                placeholder= {userDateOfBirth}
+                placeholder= {"Date of Birth: " + userDateOfBirth}
                 onChangeText={(text) => setUserDateOfBirth(text)}
-                value={userDateOfBirth}
+                value={"Date of Birth: " + userDateOfBirth}
                 autoCapitalize="none"
             />
 
             <TextInput
                 style={styles.input}
-                placeholder= {userEmail}
+                placeholder= {"Email: " + userEmail}
                 onChangeText={(text) => setUserEmail(text)}
-                value={userEmail}
+                value={"Email: " + userEmail}
                 autoCapitalize="none"
             />
 
             <TextInput
                 style={styles.input}
-                placeholder= {userPassword}
+                placeholder= {"Password: " + userPassword}
                 onChangeText={(text) => setUserPassword(text)}
-                value={userPassword}
+                value={"Password: " +userPassword}
                 autoCapitalize="none"
             />
 
             <TextInput
                 style={styles.input}
-                placeholder= {userEmergencyContactName}
-                onChangeText={(text) => setUserEmergencyContactName(text)}
-                value={userEmergencyContactName}
-                autoCapitalize="none"
-            />
-
-            <TextInput
-                style={styles.input}
-                placeholder= {userEmergencyContactNumber}
-                onChangeText={(text) => setUserEmergencyContactNumber(text)}
-                value={userEmergencyContactNumber}
-                autoCapitalize="none"
-            />
-
-            <TextInput
-                style={styles.input}
-                placeholder= {userName}
+                placeholder= {"User Name: "+ userName}
                 onChangeText={(text) => setUserName(text)}
-                value={userName}
+                value={"User Name: "+ userName}
                 autoCapitalize="none"
             />
+
+            <TextInput
+                style={styles.input}
+                placeholder= {"Contact Name: " + userEmergencyContactName}
+                onChangeText={(text) => setUserEmergencyContactName(text)}
+                value={"Contact Name: " + userEmergencyContactName}
+                autoCapitalize="none"
+            />
+
+            <TextInput
+                style={styles.input}
+                placeholder= {"Contact Number: " + userEmergencyContactNumber}
+                onChangeText={(text) => setUserEmergencyContactNumber(text)}
+                value={"Contact Number: " + userEmergencyContactNumber}
+                autoCapitalize="none"
+            />
+
 
             <TouchableOpacity style={styles.button} onPress={() => handleSaveButton()}>
                 <Text style={styles.buttonTitle}>Save</Text>
