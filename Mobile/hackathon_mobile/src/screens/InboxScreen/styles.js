@@ -14,6 +14,11 @@ export default StyleSheet.create({
     fontSize: 30,
   },
 
+
+  input: {
+    width: 200,
+  },
+
   button: {
     backgroundColor: "#424BB2",
     marginLeft: 26,
