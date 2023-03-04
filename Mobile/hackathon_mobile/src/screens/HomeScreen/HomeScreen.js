@@ -1,7 +1,9 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import styles from "./styles";
 
-import { auth } from "../../firebase/config";
+import { useEffect } from "react";
+import { auth, db } from "../../firebase/config";
+import { doc, getDoc } from "firebase/firestore";
 
 import { signOut } from "firebase/auth";
 
