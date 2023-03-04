@@ -11,7 +11,6 @@ export default function RegistrationScreen({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-
   const handleRegister = () => {
     if (password == "") {
       alert("Enter a Password");
@@ -23,18 +22,6 @@ export default function RegistrationScreen({ navigation }) {
     } else {
       alert("Registered");
     }
-
-    useEffect(() => {
-      console.log("UseEffect");
-      const unsubscribe = auth.onAuthStateChanged((user) => {
-        if (user) {
-          console.log("You are signed in as", user);
-          navigation.navigate("Home");
-        }
-      });
-  
-      return unsubscribe;
-    }, []);
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -48,6 +35,18 @@ export default function RegistrationScreen({ navigation }) {
         console.log(errorCode, errorMessage);
       });
   };
+
+  useEffect(() => {
+    console.log("UseEffect");
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        console.log("You are signed in as", user);
+        navigation.navigate("Home");
+      }
+    });
+
+    return unsubscribe;
+  }, []);
 
   return (
     <View style={styles.screen}>
