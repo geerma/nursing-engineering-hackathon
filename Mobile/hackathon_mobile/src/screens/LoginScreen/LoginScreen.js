@@ -20,6 +20,9 @@ export default function LoginScreen({ navigation }) {
   const navigateInbox = () => {
     navigation.navigate("Inbox");
   };
+  const navigateInformation = () => {
+    navigation.navigate("Information");
+  };
 
   const handleLogin = () => {
     console.log(email, password);
@@ -87,7 +90,9 @@ export default function LoginScreen({ navigation }) {
       >
         <Text style={styles.navigationTitle}>GoToInbox</Text>
       </TouchableOpacity>
-
+      <TouchableOpacity style={styles.button} onPress={() => navigateInformation()}>
+        <Text style={styles.buttonTitle}>GoToInformation</Text>
+      </TouchableOpacity>
     </View>
   );
 }
