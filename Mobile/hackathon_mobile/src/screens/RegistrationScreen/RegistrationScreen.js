@@ -2,7 +2,9 @@ import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import styles from "./styles";
 
 import { auth } from "../../firebase/config";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 export default function RegistrationScreen({ navigation }) {
   const [fullName, setFullName] = useState("");
@@ -21,6 +23,30 @@ export default function RegistrationScreen({ navigation }) {
     } else {
       alert("Registered");
     }
+
+    useEffect(() => {
+      console.log("UseEffect");
+      const unsubscribe = auth.onAuthStateChanged((user) => {
+        if (user) {
+          console.log("You are signed in as", user);
+          navigation.navigate("Home");
+        }
+      });
+  
+      return unsubscribe;
+    }, []);
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
   };
 
   return (
