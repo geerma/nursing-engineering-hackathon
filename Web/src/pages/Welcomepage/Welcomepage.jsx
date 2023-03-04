@@ -5,7 +5,14 @@ import NavBar from '../../components/Navbar/Navbar';
 import { auth } from "../../firebase/config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
+import { useNavigate } from "react-router-dom"
+
+
+
 const Welcomepage = () => {
+
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,6 +25,8 @@ const Welcomepage = () => {
         // Signed in
         const user = userCredential.user;
         console.log(user);
+
+        navigate("/")
       })
       .catch((error) => {
         const errorCode = error.code;
