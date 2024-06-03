@@ -5,27 +5,13 @@ import styles from "./styles";
 import { auth } from "../../firebase/config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
+// Handle user login
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigateRegistration = () => {
     navigation.navigate("Registration");
-  };
-
-  const navigateHome = () => {
-    navigation.navigate("Home");
-  };
-
-  const navigateInbox = () => {
-    navigation.navigate("Inbox");
-  };
-  const navigateInformation = () => {
-    navigation.navigate("Information");
-  };
-
-  const navigateMyAccount = () => {
-    navigation.navigate("MyAccount");
   };
 
   useEffect(() => {

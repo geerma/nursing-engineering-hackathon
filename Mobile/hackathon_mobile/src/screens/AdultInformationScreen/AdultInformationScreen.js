@@ -29,8 +29,8 @@ export default function AdultInformationScreen({ navigation }) {
   
 
   return (
-    <View>
-      <Text>Adult Information Screen</Text>
+    <View style={styles.screen}>
+      <Text style={styles.header}>Adult Information Screen</Text>
       <TouchableOpacity style={styles.button} onPress={() => navigateChronicConditions()}>
         <Text style={styles.buttonTitle}>Chronic Conditions</Text>
       </TouchableOpacity>
