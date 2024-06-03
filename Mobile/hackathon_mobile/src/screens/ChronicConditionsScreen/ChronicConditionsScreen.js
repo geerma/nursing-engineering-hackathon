@@ -13,8 +13,8 @@ export default function ChronicConditionsScreen({ navigation }) {
   };
 
   return (
-    <View>
-      <Text>Chronic Conditions</Text>
+    <View style={styles.screen}>
+      <Text style={styles.header}>Chronic Conditions</Text>
       <TouchableOpacity style={styles.button} onPress={() => navigateAdult()}>
         <Text style={styles.buttonTitle}>Return</Text>
       </TouchableOpacity>

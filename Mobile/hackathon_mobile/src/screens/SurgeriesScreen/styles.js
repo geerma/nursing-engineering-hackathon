@@ -9,6 +9,11 @@ export default StyleSheet.create({
     fontSize: 30,
   },
 
+  surgery_information: {
+    fontSize: 18,
+    margin: 2,
+  },
+
   input: {
     width: 200,
   },

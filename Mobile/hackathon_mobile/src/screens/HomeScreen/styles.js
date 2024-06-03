@@ -30,4 +30,22 @@ export default StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
+
+  navigation: {
+    backgroundColor: "#ADD8E6",
+    marginLeft: 26,
+    marginRight: 26,
+    marginTop: 20,
+    height: 50,
+    width: 200,
+    borderRadius: 2,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  navigationTitle: {
+    color: "black",
+    fontSize: 18,
+    fontWeight: "bold",
+  },
 });

@@ -5,27 +5,13 @@ import styles from "./styles";
 import { auth } from "../../firebase/config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
+// Handle user login
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigateRegistration = () => {
     navigation.navigate("Registration");
-  };
-
-  const navigateHome = () => {
-    navigation.navigate("Home");
-  };
-
-  const navigateInbox = () => {
-    navigation.navigate("Inbox");
-  };
-  const navigateInformation = () => {
-    navigation.navigate("Information");
-  };
-
-  const navigateMyAccount = () => {
-    navigation.navigate("MyAccount");
   };
 
   useEffect(() => {
@@ -47,6 +33,8 @@ export default function LoginScreen({ navigation }) {
         // Signed in
         const user = userCredential.user;
         console.log(user);
+        setEmail("");
+        setPassword("");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -57,7 +45,7 @@ export default function LoginScreen({ navigation }) {
 
   return (
     <View style={styles.screen}>
-      <Text style={styles.header}>Login Screen</Text>
+      <Text style={styles.header}>My Health Information</Text>
 
       <TextInput
         style={styles.input}
@@ -80,42 +68,8 @@ export default function LoginScreen({ navigation }) {
         <Text style={styles.buttonTitle}>Log in</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.link}>
-        <Text style={styles.link}>Forgot Password</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.link}>
-        <Text style={styles.link}>Privacy</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={styles.navigation}
-        onPress={() => navigateRegistration()}
-      >
-        <Text style={styles.navigationTitle}>GoToRegistration</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.navigation}
-        onPress={() => navigateHome()}
-      >
-        <Text style={styles.navigationTitle}>GoToHome</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.navigation}
-        onPress={() => navigateInbox()}
-      >
-        <Text style={styles.navigationTitle}>GoToInbox</Text>
-      </TouchableOpacity>
-      
-      <TouchableOpacity style={styles.navigation} onPress={() => navigateInformation()}>
-        <Text style={styles.navigationTitle}>GoToInformation</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={styles.navigation}
-        onPress={() => navigateMyAccount()}
-      >
-        <Text style={styles.navigationTitle}>GoToMyAccount</Text>
+      <TouchableOpacity style={styles.button} onPress={() => navigateRegistration()}>
+        <Text style={styles.buttonTitle}>Sign up now</Text>
       </TouchableOpacity>
 
     </View>

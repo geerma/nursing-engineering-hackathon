@@ -5,6 +5,7 @@ export default function InformationScreen({ navigation }) {
   const navigateLogin = () => {
     navigation.navigate("Login");
   };
+  
   const navigateInformation = () => {
     navigation.navigate("Information");
   };
@@ -19,8 +20,8 @@ export default function InformationScreen({ navigation }) {
 
 
   return (
-    <View>
-      <Text>Information</Text>
+    <View style={styles.screen}>
+      <Text style={styles.header}>Information</Text>
       <TouchableOpacity
         style={styles.button}
         onPress={() => navigateAdult()}
