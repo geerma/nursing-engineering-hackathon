@@ -19,9 +19,39 @@ export default function HomeScreen({ navigation }) {
       });
   };
 
+
+  const navigateInbox = () => {
+    navigation.navigate("Inbox");
+  };
+  const navigateInformation = () => {
+    navigation.navigate("Information");
+  };
+
+  const navigateMyAccount = () => {
+    navigation.navigate("MyAccount");
+  };
+
   return (
-    <View>
-      <Text>Home Screen</Text>
+    <View style={styles.screen}>
+      <Text style={styles.header}>Home Screen</Text>
+      <TouchableOpacity
+        style={styles.navigation}
+        onPress={() => navigateInbox()}
+      >
+        <Text style={styles.navigationTitle}>GoToInbox</Text>
+      </TouchableOpacity>
+      
+      <TouchableOpacity style={styles.navigation} onPress={() => navigateInformation()}>
+        <Text style={styles.navigationTitle}>GoToInformation</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.navigation}
+        onPress={() => navigateMyAccount()}
+      >
+        <Text style={styles.navigationTitle}>GoToMyAccount</Text>
+      </TouchableOpacity>
+
       <TouchableOpacity style={styles.button} onPress={() => handleLogout()}>
         <Text style={styles.buttonTitle}>Logout</Text>
       </TouchableOpacity>

@@ -10,7 +10,10 @@ export default StyleSheet.create({
   },
 
   input: {
-    width: 200,
+    width: 250,
+    height: 40,
+    borderWidth: 1,
+    margin: 5,
   },
 
   button: {
